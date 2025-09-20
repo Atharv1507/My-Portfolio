@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio- Atharv Aggarwal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="ballcontainer1">
+        <div class="balls b1"></div>
+        <div class="balls b2"></div>
+        <div class="balls b3"></div>
+        <div class="balls b4"></div>
+        <div class="balls b5"></div>
+        <div class="balls b6"></div>
+        <div class="balls b7"></div>
+        <div class="balls b8"></div>
+        <div class="balls b9"></div>
+    </div>
+    <div id="afteranim">
+        <!-- <nav>
+            <ul>
+                <a href="#aboutme">hi this is me</a>
+                <a href="">Nothis is </a>
+                <a href="">thiso d</a>
+                <a href="">jf</a>
+
+            </ul>
+        </nav> -->
+        <section id="aboutme">
+            <div id="cardContainer">
+                <div id='Aboutme' class="card">
+                    <div id="innerDiv">
+                        <img id="Myimg" src="images/me.jpg" alt="">
+                        <h1>Atharv Aggarwal</h1>
+                        <div class="socialLink">
+                            <a href="https://github.com/Atharv1507"><img src="images/github.png" alt=""></a>
+                            <a href="https://www.linkedin.com/in/atharv-aggarwal-180277379"><img src="images/link.png"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptatem maiores? Ducimus,
+                        quaerat
+                        repellendus explicabo amet iste dolorum sit doloremque cumque unde, sed beatae, in similique
+                        sint
+                        vero asperiores neque tempore animi. Nisi, magni, iste necessitatibus tempore modi beatae,
+                        laudantium iusto sapiente ducimus incidunt repellendus corrupti veniam cum voluptatibus
+                        excepturi
+                        odio. Delectus ipsum, aliquam est quos ipsa impedit quis iusto explicabo nam! Similique,
+                        repellendus
+                        excepturi. Illo corrupti harum </p>
+                </div>
+                <div class="Head">
+                    <header>
+                        <h1>Skill Belt</h1>
+                    </header>
+                </div>
+                <div class="card small">
+                    <img src="images/py.png" alt="">
+                    <img src="images/html.png" alt="">
+                </div>
+                <div class="card small">
+                    <img src="images/c++.png" alt="" srcset="">
+                    <img src="images/css.png" alt="" srcset="">
+                </div>
+                <div class="card small">
+                    <img src="images/java.png" alt="">
+                    <img src="images/js.png" alt="">
+                </div>
+        </section>
+
+    </div>
+
+    </div>
+
+    <script>
+        // It's often better to use querySelectorAll, as it returns a NodeList
+        // which has the convenient forEach method.
+        const balls = document.querySelectorAll('.balls');
+        const body = document.body;
+        const grid = document.querySelector("#afteranim")
+        console.log(grid); // This will show a NodeList of 4 div elements
+        // Loop through each element in the NodeList
+        balls.forEach(ball => {
+            // 1. Add the listener to the individual 'ball' element
+            // 2. Use the correct event name: 'animationend'
+            ball.addEventListener('animationend', (event) => {
+
+                // 'event.target' is the specific element that triggered the event
+                setTimeout(() => {
+                    event.target.remove();
+                }, 600);
+            });
+        });
+    </script>
+</body>
+
+</html>
