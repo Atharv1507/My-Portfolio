@@ -8,19 +8,19 @@
 
 
 body{
-    background-color:rgb(26, 1, 1);
+    /* Warm, creamy beige background */
+    background-color: #F5EFE6;
     height: auto;
     width: auto;
 }
 #afteranim{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
-    /* width: 80%; */
 }
-#cardContainer{
+.cardContainer{
     perspective: 1000px;
     /* height: auto; */
     width: 80%;
@@ -39,16 +39,23 @@ body{
     /* align-items: center; */
     border-radius: 30px;
     height: 300px;
-    background-color: rgb(255, 255, 255,0.5);
+    /* Clean, semi-transparent white for a soft glass effect */
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(138, 154, 91, 0.2);
+    /* Warm, dark brown text for readability and style */
+    color: #4E433C;
     width: auto;
     z-index:2;
     animation: lookup 1.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 .card:hover{
-    color: white;
+    /* Creamy white text for contrast on hover */
+    color: #F5F5DC;
     transform: translateZ(50px);
-    background-color:#6e1423
+    /* Sophisticated sage green for the hover background */
+    background-color: #8A9A5B;
 }
 #Aboutme{
     z-index: 0;
@@ -78,7 +85,8 @@ body{
     font-size:5rem;
 }
 #Aboutme:hover{
-    color: white;
+    /* Match hover text color */
+    color: #F5F5DC;
 }
 .small img{
     margin: 10px;
@@ -103,7 +111,51 @@ body{
     object-fit: fill;
     height:60px;
     width: 60px;
+    /* Filter changed to make icons a dark brown */
+    filter: invert(26%) sepia(10%) saturate(1001%) hue-rotate(344deg) brightness(91%) contrast(89%);
 }
+
+.gitcards{
+    display: flex;
+}
+.projects p{
+      font-family: "Source Serif 4", serif;
+
+}
+.projects{
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+.projects a{
+    color:#4E433C;
+}
+.more{
+    height: auto;
+    grid-column: 1/span 4;
+    justify-content: center;
+    align-items: center;
+}
+.more a{
+    text-decoration: none;
+}
+.Github{
+    grid-template-rows: 1fr 100px;
+}
+#Contact{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
 header{
     margin: 20px;
     opacity: 0;
@@ -111,18 +163,20 @@ header{
     animation: fade-in 1s ease-in 0.3s forwards;
 }
 header h1{
-    color: white;
   font-family: "Instrument Serif", serif;
-    font-size: 15rem;
+    font-size: 13rem;
     transform: translateY(10px);
     z-index: 1;
-    color:#85182a;
+    /* Header color set to the sage green accent */
+    color: #8A9A5B;
 }
 header h2{
     font-size:2rem;
-    color:#85182a;
+    /* Header color set to the sage green accent */
+    color:#4E433C;
 
 }
+
 
 @keyframes scale-in{
     0%{
@@ -199,7 +253,8 @@ header h2{
 }
 
 .balls {
-    background-color:#9b1e33;
+    /* Animation color set to the sage green accent */
+    background-color: #8A9A5B;
     height: 2000px;
     width: 200px;
     border-radius: 5rem;
@@ -226,4 +281,23 @@ header h2{
         border-radius: 0%;
     }
 }
+nav{
+    margin: 20px;
+    width: 70%;
+    height: 6vh;
+    border-radius:10px ;
+    font-size:2rem ;
+}
+ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+ul a{
+    text-decoration: none;
+    color: #4E433C;
+}
+
 
